@@ -9,9 +9,9 @@ export default function CVHeader () {
     const [title, setTitle] = useState('Software Engineer');
 
     const contactData = [
-        {prefix: 'fas', icon: 'phone-square-alt', data: '667 682 756'},
-        {prefix: 'fab', icon: 'linkedin', data: 'linkedin.com/in/jaime-sanchez-pedros'},
-        {prefix: 'fas', icon: 'envelope', data: 'jaimesanchez.93@gmail.com'},
+        {prefix: 'fas', icon: 'phone-square-alt', data: '-'},
+        {prefix: 'fab', icon: 'linkedin', data: '-'},
+        {prefix: 'fas', icon: 'envelope', data: '-'},
         {prefix: 'fas', icon: 'car', data: 'Drive license'},
         {prefix: 'fab', icon: 'github', data: 'github.com/jaimesanchez93'},
     ]
