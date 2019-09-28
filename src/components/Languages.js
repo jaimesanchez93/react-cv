@@ -8,10 +8,6 @@ import LanguageCircle from './LanguageCircle';
 
 export default function Languages () {
 
-    const languageTitle = 'English';
-    const languageSubtitle = `B2 Level<br> TOEIC Listening & Reading`;
-
-
     const SectionWrapper = styled.div`
         display: flex;
         flex-direction:column;

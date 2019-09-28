@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Education from './Education';
 import Languages from './Languages';
+import WorkExperience from './WorkExperience';
 
 export default function CVBody() {
 
@@ -26,6 +27,9 @@ export default function CVBody() {
             <BodyRow>
                 <Education></Education>
                 <Languages></Languages>
+            </BodyRow>
+            <BodyRow>
+                <WorkExperience></WorkExperience>
             </BodyRow>
         </BodyWrapper>
     )

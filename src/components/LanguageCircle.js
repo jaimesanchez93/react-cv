@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 
 import 'react-circular-progressbar/dist/styles.css';
-import ChangingProgressProvider from './ChangingProgressProvider';
 
 
 export default function LanguageCircle(props) {
@@ -32,23 +31,18 @@ export default function LanguageCircle(props) {
     `
 
     return (
-        <ChangingProgressProvider value={value}>
-            {percentage => (
+
             <CircularProgressbarWithChildren
-                value={percentage}
+                value={value}
                 
                 styles={buildStyles({
                     pathColor: '#002859',
-                    pathTransition:
-                        percentage === 0 ? 'none' : 'stroke-dashoffset 0.5s ease 0s',
                 })}
             >
                 <Title>{name}</Title>
                 <Level>{level}</Level>
                 <Text>{title}</Text>
             </CircularProgressbarWithChildren>
-            )}
-        </ChangingProgressProvider>
     )
 
 }
