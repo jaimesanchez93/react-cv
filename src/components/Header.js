@@ -58,16 +58,16 @@ export default function CVHeader () {
      `
 
     return (
-        <HeaderWrapper>
+        <HeaderWrapper className="header-wrapper">
             <BasicInfoBox>
                 <Title>{fullName}</Title>
                 <SubTitle>{title}</SubTitle>
             </BasicInfoBox>
             <ContactInfoBox>
                 {
-                    contactData.map(element => {
+                    contactData.map((element,index) => {
                         return (
-                            <ContactRow prefix={element.prefix} icon={element.icon} data={element.data}></ContactRow>
+                            <ContactRow key={index} prefix={element.prefix} icon={element.icon} data={element.data}></ContactRow>
                         )
                     })
                 }

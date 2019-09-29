@@ -36,12 +36,13 @@ export default function WorkTimeline () {
         title: 'Web development at Criptored'
         },
     ]
+
     return (
         <TimelineWrapper>
             {
-                jobStages.map(element => {
+                jobStages.map((element, index) => {
                     return (
-                        <TimelineStep timeRange={element.timeRange} title={element.title}></TimelineStep>
+                            <TimelineStep key={index} index={index} hideLine={index === jobStages.length - 1} timeRange={element.timeRange} title={element.title}></TimelineStep>
                     )
                 })
             }

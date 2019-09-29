@@ -50,9 +50,9 @@ export default function Education () {
             <SectionTitle prefix="fas" icon="graduation-cap" title="education"></SectionTitle>
             <EducationWrapper>
             {
-                educationData.map(element => {
+                    educationData.map((element, index) => {
                         return (
-                            <EducationRow title={element.title} center={element.center}></EducationRow>
+                            <EducationRow key={index} title={element.title} center={element.center}></EducationRow>
                         )  
           
 
