@@ -13,7 +13,6 @@ export default function LanguageCircle(props) {
     const [level, setLevel ] = useState(props.level); 
     const [title, setTitle ] = useState(props.title);
     const [value, setValue ] = useState(0);
-    console.log('val', value);
     
     const Title = styled.div`
             color: #363030;
@@ -46,6 +45,7 @@ export default function LanguageCircle(props) {
                 
                 styles={buildStyles({
                     pathColor: '#002859',
+                    pathTransitionDuration: 2.5,
                 })}
             >
                 <Title>{name}</Title>

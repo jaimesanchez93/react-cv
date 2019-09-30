@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import ContactRow from './ContactRow';
 import styled from 'styled-components';
 
 import Education from './Education';
 import Languages from './Languages';
 import WorkExperience from './WorkExperience';
+import Skills from './Skills';
 
 export default function CVBody() {
 
@@ -30,6 +30,7 @@ export default function CVBody() {
             </BodyRow>
             <BodyRow>
                 <WorkExperience></WorkExperience>
+                <Skills></Skills>
             </BodyRow>
         </BodyWrapper>
     )

@@ -72,7 +72,7 @@ export default function TimelineStep (props) {
         margin - left: -2px;
         background: #002859;
         z-index: -1;
-        animation: ${keyFrameExampleOne} 1.5s ease-in-out 0s 1;
+        animation: ${keyFrameExampleOne} 2.5s ease-in-out 0s 1;
 
     `
 
