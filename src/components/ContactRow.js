@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
+import {
+    useTranslation
+} from 'react-i18next';
 
 
 export default function ContactRow (props) {
@@ -20,14 +23,19 @@ export default function ContactRow (props) {
         font-weight: 300;
         font-size: 18px;
     `
-    
+
     const [iconName, setIcon] = useState(props.icon);
     const [prefix, setPrefix] = useState(props.prefix);
     const [data, setData] = useState(props.data);
+      const {
+          t,
+          i18n
+      } = useTranslation();
+
     return (
         <ContactRowWrapper>
             <FontAwesomeIcon size="2x" color="white" icon={[prefix, iconName]} />
-            <ContactData>{data}</ContactData>
+            <ContactData>{t(data)}</ContactData>
         </ContactRowWrapper>
     )
 }

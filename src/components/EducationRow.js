@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import ContactRow from './ContactRow';
 import styled from 'styled-components';
 
+import { useTranslation } from 'react-i18next';
 
 export default function EducationRow (props) {
 
     const [title, setTitle] = useState(props.title);
     const [center, setCenter] = useState(props.center);
+
+      const {
+          t,
+          i18n
+      } = useTranslation();
 
     const EducationWrapper = styled.div`
         display: flex;
@@ -41,12 +47,13 @@ export default function EducationRow (props) {
 
     `
 
+
     return (
-        
+
         <EducationWrapper>
             <Circle></Circle>
             <DataWrapper>
-                <EducationTitle>{title}</EducationTitle>
+                <EducationTitle>{t(title)}</EducationTitle>
                 <div>{center}</div>
             </DataWrapper>
         </EducationWrapper>

@@ -3,7 +3,12 @@ import ContactRow from './ContactRow';
 import styled from 'styled-components';
 
 
+
 import TimelineStep from './TimelineStep';
+
+import {
+    useTranslation
+} from 'react-i18next';
 
 export default function WorkTimeline () {
 
@@ -37,17 +42,24 @@ export default function WorkTimeline () {
         },
     ]
 
+      const {
+          t,
+          i18n
+      } = useTranslation();
+
+          i18n.changeLanguage('es-ES');
+
     return (
         <TimelineWrapper>
             {
                 jobStages.map((element, index) => {
                     return (
-                            <TimelineStep key={index} index={index} hideLine={index === jobStages.length - 1} timeRange={element.timeRange} title={element.title}></TimelineStep>
+                            <TimelineStep key={index} index={index} hideLine={index === jobStages.length - 1} timeRange={element.timeRange} title={t(element.title)}></TimelineStep>
                     )
                 })
             }
         </TimelineWrapper>
 
-    ) 
+    )
 
 }
