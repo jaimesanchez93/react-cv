@@ -9,10 +9,14 @@ export default function EducationRow (props) {
     const [title, setTitle] = useState(props.title);
     const [center, setCenter] = useState(props.center);
 
+    console.log(title);
+
       const {
           t,
           i18n
       } = useTranslation();
+
+
 
     const EducationWrapper = styled.div`
         display: flex;
@@ -54,7 +58,9 @@ export default function EducationRow (props) {
             <Circle></Circle>
             <DataWrapper>
                 <EducationTitle>{t(title)}</EducationTitle>
-                <div>{center}</div>
+                < div > {
+                    t(center)
+                } < /div>
             </DataWrapper>
         </EducationWrapper>
     )

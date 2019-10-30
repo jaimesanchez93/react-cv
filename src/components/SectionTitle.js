@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ContactRow from './ContactRow';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
 
 
 export default function SectionTitle (props) {
@@ -9,6 +10,7 @@ export default function SectionTitle (props) {
     const [prefix, setPrefix] = useState(props.prefix);
     const [iconName, setIconName] = useState(props.icon);
     const [title, setTitle] = useState(props.title);
+    const { t, i18n } = useTranslation();
 
     const TitleWrapper = styled.div`
         display: flex;
@@ -27,7 +29,7 @@ export default function SectionTitle (props) {
     return(
         <TitleWrapper>
             <FontAwesomeIcon size="2x" color="#1391b1" icon={[prefix, iconName]} />
-            <Title>{title}</Title>
+            <Title>{t(title)}</Title>
         </TitleWrapper>
 
     )

@@ -47,14 +47,16 @@ export default function WorkTimeline () {
           i18n
       } = useTranslation();
 
-          i18n.changeLanguage('es-ES');
+        //   i18n.changeLanguage('es-ES');
 
     return (
         <TimelineWrapper>
             {
                 jobStages.map((element, index) => {
                     return (
-                            <TimelineStep key={index} index={index} hideLine={index === jobStages.length - 1} timeRange={element.timeRange} title={t(element.title)}></TimelineStep>
+                            <TimelineStep key={index} index={index} hideLine={index === jobStages.length - 1}
+                            timeRange={t(element.timeRange)} title={t(element.title)}>
+                            </TimelineStep>
                     )
                 })
             }

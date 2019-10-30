@@ -9,6 +9,9 @@
         "Drive license": "Carnét de conducir",
         "English": "Inglés",
         "Spanish": "Español",
+        "B2 Level": "Nivel B2",
+        "TOEIC Listening & Reading": "TOEIC Listening & Reading",
+        "Native": "Nativo",
         "June 2019 - Currently": "Junio 2019 - Actualmente",
         "Fullstack Developer at The keyTalent": "Desarrollador fullstack en The Key Talent",
         "September 2017 - May 2019": "Septiembre 2017 - Mayo 2019",
@@ -18,5 +21,9 @@
         "February 2016 - July 2016": "Febrero 2016 - Julio 2016",
         "Talentum ShortTracks Telefónica Scolarship: The Musical Pi": "Beca Talentum ShortTracks Telefónica: The Musical Pi",
         "June 2015 - February 2016": "Junio 2015 - Febrero 2016",
-        "Web development at Criptored": "Desarrollo web en Criptored"
+        "Web development at Criptored": "Desarrollo web en Criptored",
+        "languages": "idiomas",
+        "education": "educación",
+        "work experience": "experiencia laboral",
+        "skills": "conocimientos"
 }
