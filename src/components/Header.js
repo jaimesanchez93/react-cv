@@ -5,22 +5,36 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Flex from './Flex';
 import Responsive from './Responsive';
+import { screenSize } from './Theme';
 
 
 
-const HeaderWrapper = styled(Flex)``;
+const HeaderWrapper = styled(Flex)`
+    @media(max-width: ${screenSize.md}) {
+        margin: 24px 0;
+    } 
+`;
 
 const TitleRow = styled(Responsive)`
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 200px;
+
+    @media(max-width: ${screenSize.md}) {
+        flex-direction: column;
+        align-items: center;
+    } 
 `
 
 const HeaderTitle = styled.div`
     font-family: "Montserrat";
     font-size: 30px;
     font-weight: regular;
+
+    @media(max-width: ${screenSize.md}) {
+        text-align: center;
+    }   
 `
 
 const NameSpan = styled.span`
