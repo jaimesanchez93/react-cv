@@ -3,20 +3,24 @@ import styled from "styled-components";
 
 import Flex from './Flex';
 import Responsive from './Responsive';
-import { fonts, colors } from './Theme';
+import { screenSize, fonts, colors } from './Theme';
 import Text from './Text';
 
 const Container = styled(Flex)`
    width: 100%;
+    @media(max-width: ${screenSize.md}) {
+        flex-direction: column;
+        align-items: center;
+    } 
 `
 
 const Title = styled(Text)``;
 
-const BarWrapper = styled(Flex)`
+const BarWrapper = styled(Responsive)`
    width: 100%;
 `;
 
-const ProgressBar =styled(Flex)`
+const ProgressBar =styled(Responsive)`
    height: 16px;
    width: 100%;
    border-radius: 4px;
@@ -36,9 +40,19 @@ const EmptyBar = styled.div`
    border-radius: 4px;
 `;
 
-const TechnologiesList = styled(Flex)``;
+const TechnologiesList = styled(Flex)`
+    @media(max-width: ${screenSize.md}) {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    } 
+`;
 
-const TechnologyItem = styled(Flex)``;
+const TechnologyItem = styled(Flex)`
+    @media(max-width: ${screenSize.md}) {
+        margin: 16px;
+    } 
+`;
 
 const TechItem = ({percentage, technologies}) => {
 

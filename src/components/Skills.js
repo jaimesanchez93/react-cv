@@ -4,24 +4,56 @@ import styled from "styled-components";
 import Flex from './Flex';
 import Responsive from './Responsive';
 import Text from './Text';
-import { fonts } from './Theme';
+import { screenSize, fonts } from './Theme';
  
 import TechItem from './TechItem';
 import LanguageItem from "./LanguageItem";
 
-const Container = styled(Flex)``;
-
-const Title = styled(Text)``;
-
-const Content = styled(Flex)`
-   width: 100%;
+const Container = styled(Flex)`
+   @media(max-width: ${screenSize.md}) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px;
+   } 
 `;
 
-const SkillItem = styled(Flex)`
-   width: 100%;
+const SkillsWrapper = styled(Flex)`
+   @media(max-width: ${screenSize.md}) {
+      align-items: center;
+   } 
 `;
 
-const Column = styled(Flex)`
+const Title = styled(Text)`
+   @media(max-width: ${screenSize.md}) {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         font-size: 28px;
+   } 
+`;
+
+const Content = styled(Responsive)`
+   width: 100%;
+       @media(max-width: ${screenSize.md}) {
+        flex-direction: column;
+        align-items: center;
+    } 
+`;
+
+const SkillItem = styled(Responsive)`
+   width: 100%;
+   @media(max-width: ${screenSize.md}) {
+      flex-direction: column;
+      align-items: center;
+    } 
+`;
+
+const Column = styled(Responsive)`
+   @media(max-width: ${screenSize.md}) {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    } 
 `;
 
 
@@ -93,8 +125,8 @@ const Skills = () => {
 
    return(
       <Container>
-         <Responsive direction="column" align="flex-start">
-            <Title size="38px" weight="700" textAlign="left">Skills & Technologies</Title>
+         <SkillsWrapper direction="column" align="flex-start">
+            <Title size="38px" weight="700" textAlign="left" margin="16px 0">Skills & Technologies</Title>
             <Content justify="space-between" align="flex-start" margin="28px 0">
                <Column className="technologies-column" direction="column" margin="0 24px 0 0">
                   <SkillItem direction="column" align="flex-start" margin="0 0 24px 0">
@@ -122,7 +154,7 @@ const Skills = () => {
 
 
             </Content>
-         </Responsive>
+         </SkillsWrapper>
       </Container>
    );
 }

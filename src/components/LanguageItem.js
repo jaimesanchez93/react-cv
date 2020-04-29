@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { CircleProgressBar } from './CircleProgressBar';
 
 import Flex from './Flex';
+import Responsive from './Responsive';
 import Text from './Text';
 
 import { colors } from './Theme';
 
-const Container = styled(Flex)`
+const Container = styled(Responsive)`
    width: 100%;
 `;
 
