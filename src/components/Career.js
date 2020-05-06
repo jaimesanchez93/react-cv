@@ -36,9 +36,10 @@ const InfoBox = styled(Flex)`
 
 const Timeline = styled(Flex)`
    position: absolute;
-   height: calc(100% - 100px);
+   height: 100%;
    width: 3px;
    background-color: ${colors.caribeanGreen};
+   top: 0;
 `;
 
 const BulletList =  styled(Flex)`
@@ -129,19 +130,27 @@ const Career = () => {
    const rightColumn = careerList.filter((element, index) => index % 2 !== 0);
    const [universityCareerHeight, setUniversityCareerHeight ] = useState(0);
 
+   const timelineRef = useRef();
+
    useEffect(() =>{
       let tops = [];
-      const universityHeight = document.getElementById(`career-${careerList[careerList.length - 1].id}`).clientHeight;
-      setUniversityCareerHeight(universityHeight);
-
-      careerList.map(element => {
-         let offsetTop = document.getElementById(`career-${element.id}`).offsetTop;
-         if (element.id % 2 === 0) {
-            offsetTop += 100;
-         }
-         tops.push(offsetTop);
-      });      
-      setTopPositions(tops);
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
+      if (!isMobile) {
+         const universityHeight = document.getElementById(`career-${careerList[careerList.length - 1].id}`).clientHeight;
+         setUniversityCareerHeight(universityHeight);
+   
+         careerList.map((element, index) => {
+            let offsetTop = document.getElementById(`career-${element.id}`).offsetTop;
+            if (element.id % 2 === 0) {
+               offsetTop += 100;
+            }
+            if (index === careerList.length - 1) {
+               offsetTop = timelineRef.current.clientHeight;
+            }
+            tops.push(offsetTop);
+         });      
+         setTopPositions(tops);
+      }
    }, []);
 
 
@@ -150,7 +159,7 @@ const Career = () => {
          <SectionWrapper direction="column" align="flex-start">
          <Title size="38px" weight="700" textAlign="left" margin="16px 0">Career</Title>
          <InfoBox>
-               {!responsive && <Timeline style={{ height: `calc(100% - ${universityCareerHeight}px)`}} className="timeline" /> }
+               {!responsive && <Timeline ref={timelineRef} className="timeline" /> }
                {!responsive && 
                <BulletList direction="column" justify="flex-start">
                   <div style={{position: 'relative'}}>
@@ -196,15 +205,6 @@ const Career = () => {
                </Flex>
                }
 
-
-{/* 
-               {careerList.map((element, index) => {
-                  return (
-                     <CareerItem key={element.name} name={element.name} 
-                     logo={element.logo} role={element.role} 
-                     time={element.time} description={element.description} />
-                  )
-               })} */}
             </CareerWrapper>
          </InfoBox>
          </SectionWrapper>
