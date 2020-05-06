@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e7009728.chunk.css",
+    "main.js": "/static/js/main.59255370.chunk.js",
+    "main.js.map": "/static/js/main.59255370.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.4b1521c4.js",
+    "runtime~main.js.map": "/static/js/runtime~main.4b1521c4.js.map",
+    "static/js/2.7b57429b.chunk.js": "/static/js/2.7b57429b.chunk.js",
+    "static/js/2.7b57429b.chunk.js.map": "/static/js/2.7b57429b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7461b9b220c11a552776c7d831c9cbe3.js": "/precache-manifest.7461b9b220c11a552776c7d831c9cbe3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e7009728.chunk.css.map": "/static/css/main.e7009728.chunk.css.map",
+    "static/media/Ellipse_5.svg": "/static/media/Ellipse_5.2d0e4ec0.svg",
+    "static/media/Springer Ebooks.pdf": "/static/media/Springer Ebooks.21875577.pdf",
+    "static/media/american-football.svg": "/static/media/american-football.f4052974.svg",
+    "static/media/criptored.png": "/static/media/criptored.e6ec5b85.png",
+    "static/media/gamepad.svg": "/static/media/gamepad.bef5e4ae.svg",
+    "static/media/headphones.svg": "/static/media/headphones.d5cb2e7a.svg",
+    "static/media/kas_factory.png": "/static/media/kas_factory.9cfdb47b.png",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg",
+    "static/media/popcorn.svg": "/static/media/popcorn.802ae12b.svg",
+    "static/media/the_key_talent.png": "/static/media/the_key_talent.b36310c2.png"
+  }
+}
