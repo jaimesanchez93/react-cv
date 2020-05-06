@@ -7,6 +7,7 @@ import Text from './Text';
 import { screenSize, colors } from './Theme';
 import { useResponsive } from '../lib/ResponsiveProvider';
 
+
 import CareerItem from './CareerItem';
 
 const Container = styled(Flex)``;
@@ -134,8 +135,7 @@ const Career = () => {
 
    useEffect(() =>{
       let tops = [];
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
-      if (!isMobile) {
+      if (!responsive) {
          const universityHeight = document.getElementById(`career-${careerList[careerList.length - 1].id}`).clientHeight;
          setUniversityCareerHeight(universityHeight);
    

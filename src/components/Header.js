@@ -6,10 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Flex from './Flex';
 import Responsive from './Responsive';
 import { screenSize } from './Theme';
+import {ReactComponent as Ellipse } from '../assets/Ellipse_5.svg';
+import { useResponsive } from '../lib/ResponsiveProvider';
 
 
 
 const HeaderWrapper = styled(Flex)`
+    position: relative;
     @media(max-width: ${screenSize.md}) {
         margin: 24px 0;
     } 
@@ -59,10 +62,16 @@ const ContactRow = styled(Responsive)`
     cursor: pointer;
 `;
 
+
 export default function Header () {
+
+    const { responsive } = useResponsive();
+
+
 
     return (
         <HeaderWrapper className="header-wrapper" direction="column" align="center" justify="center">
+             <Ellipse width={responsive ? '350' : '100%'} style={{ position: 'absolute' }} />
             <TitleRow>
             <HeaderTitle>
                     Hello, I'm <NameSpan>Jaime Sánchez Pedrós</NameSpan>,<br></br> <JobTitle>software engineer</JobTitle> with experience in <br></br> web development.
