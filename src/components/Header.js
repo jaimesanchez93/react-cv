@@ -50,6 +50,7 @@ const JobTitle = styled.span`
 
 const ContactRow = styled(Responsive)`
 justify-content: 'flex-end';
+z-index: 2;
  & * {
      margin: 0 15px;
  }
