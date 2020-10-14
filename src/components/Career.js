@@ -76,41 +76,69 @@ const Career = () => {
    const { responsive } = useResponsive();
    const [topPositions, setTopPositions] = useState([]);
 
+   // const careerList = [
+   //    {
+   //       id: 1,
+   //       name: 'The Key Talent',
+   //       logo: 'the_key_talent.png',
+   //       role: 'Full stack developer',
+   //       time: 'Jun 2019 - Now',
+   //       description: 'I am involucrated in different projects formed by multiple teams (engineer, product and UX). We are using the Django/Angular stack, and Jenkins for the CI/CD process'
+   //    },
+   //    {
+   //       id: 2,
+   //       name: 'Kas Factory',
+   //       logo: 'kas_factory.png',
+   //       role: 'Web developer',
+   //       time: 'Sep 2019 - May 2019',
+   //       description: 'Worked at Kas Factory for almost two years. I was working as the main frontend developer using Angular and Ionic but I did  several tasks for the backend using Django. Among  other third party libraries I got to work with Stripe, Paypal, Google Maps. ...As part of my formation I recieved a Python and Django curse from the CEO who is the Director of the Web Development Bootcamp at Keepcoding.'
+   //    },
+   //    {
+   //       id: 3,
+   //       name: 'Bytherent',
+   //       logo: 'bytherent.png',
+   //       role: 'Frontend Developer',
+   //       time: 'Apr 2017 - Aug 2017',
+   //       description: 'I was working for 4 months at Bytherent, a Real State startup. The tech stack that we used was NodeJS and Parse for the backend and AngularJS for the web app, the was also a native app in iOS and Android. I worked as the main frontend developer but I also helped when I could with the Android app since I had a 200h Android Course sponsored by Samsung.'
+   //    },
+   //    {
+   //       id: 4,
+   //       name: 'The Musical Pi',
+   //       logo: 'the_musical_pi.png',
+   //       role: 'Personal project',
+   //       time: 'Feb 2016 - Jul 2016',
+   //       description: 'At Talentum Shorttracks i had the chance to develop a personal project. It was a generic music Synthesizer using a Raspberry Pi and a keyboard. It was based on Raspbian OS wich a GUI to select different synths installed in the raspberry and integrated with the CSound API to plug the keyboard and register sounds.'
+   //    },
+   //    {
+   //       id: 5,
+   //       name: 'Criptored',
+   //       logo: 'criptored.png',
+   //       role: 'Web developer',
+   //       time: 'Jun 2015 - Feb 2016',
+   //       description: 'I worked at Criptored, a project from UPM university, for 7 months as a web developer/UX developer (HTML + CSS)'
+   //    },
+   //    {
+   //       id: 6,
+   //       name: 'University',
+   //       logo:  null,
+   //       role: 'Universidad Politécnica de Madrid Software Engineer',
+   //       time: '2011 - 2017',
+   //       description: null
+   //    },
+   // ];
+
+
    const careerList = [
       {
          id: 1,
-         name: 'The Key Talent',
-         logo: 'the_key_talent.png',
-         role: 'Full stack developer',
-         time: 'Jun 2019 - Now',
-         description: 'I am involucrated in different projects formed by multiple teams (engineer, product and UX). We are using the Django/Angular stack, and Jenkins for the CI/CD process'
+         name: 'University',
+         logo: null,
+         role: 'Universidad Politécnica de Madrid Software Engineer',
+         time: '2011 - 2017',
+         description: null
       },
       {
          id: 2,
-         name: 'Kas Factory',
-         logo: 'kas_factory.png',
-         role: 'Web developer',
-         time: 'Sep 2019 - May 2019',
-         description: 'Worked at Kas Factory for almost two years. I was working as the main frontend developer using Angular and Ionic but I did  several tasks for the backend using Django. Among  other third party libraries I got to work with Stripe, Paypal, Google Maps. ...As part of my formation I recieved a Python and Django curse from the CEO who is the Director of the Web Development Bootcamp at Keepcoding.'
-      },
-      {
-         id: 3,
-         name: 'Bytherent',
-         logo: 'bytherent.png',
-         role: 'Frontend Developer',
-         time: 'Apr 2017 - Aug 2017',
-         description: 'I was working for 4 months at Bytherent, a Real State startup. The tech stack that we used was NodeJS and Parse for the backend and AngularJS for the web app, the was also a native app in iOS and Android. I worked as the main frontend developer but I also helped when I could with the Android app since I had a 200h Android Course sponsored by Samsung.'
-      },
-      {
-         id: 4,
-         name: 'The Musical Pi',
-         logo: 'the_musical_pi.png',
-         role: 'Personal project',
-         time: 'Feb 2016 - Jul 2016',
-         description: 'At Talentum Shorttracks i had the chance to develop a personal project. It was a generic music Synthesizer using a Raspberry Pi and a keyboard. It was based on Raspbian OS wich a GUI to select different synths installed in the raspberry and integrated with the CSound API to plug the keyboard and register sounds.'
-      },
-      {
-         id: 5,
          name: 'Criptored',
          logo: 'criptored.png',
          role: 'Web developer',
@@ -118,14 +146,46 @@ const Career = () => {
          description: 'I worked at Criptored, a project from UPM university, for 7 months as a web developer/UX developer (HTML + CSS)'
       },
       {
-         id: 6,
-         name: 'University',
-         logo:  null,
-         role: 'Universidad Politécnica de Madrid Software Engineer',
-         time: '2011 - 2017',
-         description: null
+         id: 3,
+         name: 'The Musical Pi',
+         logo: 'the_musical_pi.png',
+         role: 'Personal project',
+         time: 'Feb 2016 - Jul 2016',
+         description: 'At Talentum Shorttracks i had the chance to develop a personal project. It was a generic music Synthesizer using a Raspberry Pi and a keyboard. It was based on Raspbian OS wich a GUI to select different synths installed in the raspberry and integrated with the CSound API to plug the keyboard and register sounds.'
       },
-   ];
+      {
+         id: 4,
+         name: 'Bytherent',
+         logo: 'bytherent.png',
+         role: 'Frontend Developer',
+         time: 'Apr 2017 - Aug 2017',
+         description: 'I was working for 4 months at Bytherent, a Real State startup. The tech stack that we used was NodeJS and Parse for the backend and AngularJS for the web app, the was also a native app in iOS and Android. I worked as the main frontend developer but I also helped when I could with the Android app since I had a 200h Android Course sponsored by Samsung.'
+      },
+      {
+         id: 5,
+         name: 'Kas Factory',
+         logo: 'kas_factory.png',
+         role: 'Web developer',
+         time: 'Sep 2019 - May 2019',
+         description: 'Worked at Kas Factory for almost two years. I was working as the main frontend developer using Angular and Ionic but I did  several tasks for the backend using Django. Among  other third party libraries I got to work with Stripe, Paypal, Google Maps. ...As part of my formation I recieved a Python and Django curse from the CEO who is the Director of the Web Development Bootcamp at Keepcoding.'
+      },
+      {
+         id: 6,
+         name: 'The Key Talent',
+         logo: 'the_key_talent.png',
+         role: 'Full stack developer',
+         time: 'Jun 2019 - Now',
+         description: 'I am involucrated in different projects formed by multiple teams (engineer, product and UX). We are using the Django/Angular stack, and Jenkins for the CI/CD process'
+      },
+      {
+         id: 7,
+         name: 'Nware',
+         logo: 'nware.png',
+         role: 'Main frontend developer',
+         time: 'Jun 2020 - Now',
+         description: 'I am the main frontend developer at Nware, where I am developing several projects such as a Web app (Angular) and Android App (React Native) to play games from the cloud. Also I am working side by side with the backend team and the streaming team to integrate all the features with the frontend apps, besides working with the product team to manage the roadmap.'
+      },
+   ].reverse();
 
    const leftColumn = careerList.filter((element, index) => index % 2 === 0);
    const rightColumn = careerList.filter((element, index) => index % 2 !== 0);
