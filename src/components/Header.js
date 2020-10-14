@@ -49,9 +49,13 @@ const JobTitle = styled.span`
 `
 
 const ContactRow = styled(Responsive)`
+justify-content: 'flex-end';
  & * {
      margin: 0 15px;
  }
+@media(max-width: ${screenSize.md}) {
+    justify-content: 'center';
+    }  
  `;
 
  const IconLink = styled.a`
@@ -77,7 +81,7 @@ export default function Header () {
                     Hello, I'm <NameSpan>Jaime Sánchez Pedrós</NameSpan>,<br></br> <JobTitle>software engineer</JobTitle> with experience in <br></br> web development.
             </HeaderTitle>
             </TitleRow>
-            <ContactRow justify="flex-end" align="center">
+            <ContactRow align="center">
                 <IconLink href="https://www.github.com/jaimesanchez93/" target="_blank">
                     <FontAwesomeIcon color="#0CCEAF" size="2x" icon={['fab', 'github']}></FontAwesomeIcon>
                 </IconLink>
