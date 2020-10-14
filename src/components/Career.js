@@ -114,7 +114,7 @@ const Career = () => {
          name: 'Kas Factory',
          logo: 'kas_factory.png',
          role: 'Web developer',
-         time: 'Sep 2019 - May 2019',
+         time: 'Sep 2017 - May 2019',
          description: 'Worked at Kas Factory for almost two years. I was working as the main frontend developer using Angular and Ionic but I did  several tasks for the backend using Django. Among  other third party libraries I got to work with Stripe, Paypal, Google Maps. ...As part of my formation I recieved a Python and Django curse from the CEO who is the Director of the Web Development Bootcamp at Keepcoding.'
       },
       {
@@ -122,7 +122,7 @@ const Career = () => {
          name: 'The Key Talent',
          logo: 'the_key_talent.png',
          role: 'Full stack developer',
-         time: 'Jun 2019 - Now',
+         time: 'Jun 2019 - May 2020',
          description: 'I am involucrated in different projects formed by multiple teams (engineer, product and UX). We are using the Django/Angular stack, and Jenkins for the CI/CD process'
       },
       {
