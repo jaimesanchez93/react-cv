@@ -45,7 +45,7 @@ const CareerItem = ({name, logo, role, time, description, id}) => {
          <Title size="24px" weight="700" lineHeight="29px">{name}</Title>
          <Text margin="4px 0" size="20px" weight="700" lineHeight="24px" color={colors.opal} transform="uppercase">{role}</Text>
          <Text margin="4px 0" size="18px" weight="700" lineHeight="22px" color={colors.caribeanGreen} >{time}</Text>
-         {description && <Text margin="7px 0" size="22px" lineHeight="30px" family={fonts.Nunito}>{description}</Text> }
+         {description && <Text margin="7px 0" size="16px" lineHeight="24px" family={fonts.Nunito}>{description}</Text> }
       </ItemWrapper>
    )  
 }
