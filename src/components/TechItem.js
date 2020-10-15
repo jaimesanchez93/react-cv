@@ -83,13 +83,13 @@ const TechItem = ({percentage, technologies}) => {
                <FillBar style={{width: `${progressBar}%`}} />
                <EmptyBar style={{width: `calc(100% - ${progressBar}%)` }} />
             </ProgressBar>
-            <TechnologiesList>
+            <TechnologiesList align="flex-start">
                {
                technologies.map((element, index) => {
                   return (
-                     <TechnologyItem key={index} direction="column" margin="0 16px" >
+                     <TechnologyItem key={index} direction="column" align="center" margin="0 16px" >
                         <img height="50px" src={require(`../assets/${element.logo}`)}  alt={element.name} />
-                        <div>{element.name}</div>
+                        <div style={{textAlign: 'center', marginTop: '8px'}}>{element.name}</div>
                      </TechnologyItem>
                   )
                })

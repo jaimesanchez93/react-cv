@@ -79,6 +79,10 @@ const Skills = () => {
          name: 'Ionic',
          logo: 'Ionic.png'
       },
+      {
+         name: 'React Native',
+         logo: 'react-native.png'
+      },
    ];
 
    const backendList = [
