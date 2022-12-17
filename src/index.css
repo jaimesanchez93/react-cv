@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 body {
   margin: 0;
@@ -11,18 +10,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   body {
     padding: 0 8px;
   }
-  
 }
-
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-

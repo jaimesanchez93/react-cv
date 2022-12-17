@@ -19,10 +19,24 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
         "react-hooks/exhaustive-deps": "off",
-        "prettier/prettier": "warn"
+        "prettier/prettier": "warn",
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "react/destructuring-assignment": "off",
+        "react/prop-types": "warn",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ]
     }
 }
